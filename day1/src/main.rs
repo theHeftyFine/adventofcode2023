@@ -74,7 +74,7 @@ fn num_or_accum(acc: &Vec<char>) -> u8 {
 		}
 		reverse.push(c);
 		let word = reverse.iter().cloned().rev().collect::<String>();
-		let value: u8 = match <String as AsRef<str>>::as_ref(&word) {
+		let value: u8 = match &word {
 			s if s.contains("one") => 1,
 			s if s.contains("two") => 2,
 			s if s.contains("three") => 3,
